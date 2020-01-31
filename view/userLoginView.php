@@ -1,4 +1,10 @@
-<?php include_once 'templates/header.php'; ?>
+<?php include_once 'templates/header.php'; 
+
+
+echo "password OK <br>";
+           echo $_SESSION['storage'];
+           ?>          
+
 
 <form method="POST">
     <div class="field">
@@ -10,10 +16,9 @@
         <input type="password" name="password" id="password" required>
     </div>
     <input type="submit" id='submit' value='LOGIN'>
-
-
-
+</form>
 <?php
+
 
 include_once 'templates/footer.php';
 ?>

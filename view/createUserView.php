@@ -19,6 +19,5 @@
         <input type="text" name="password" id="password">
         <input type="submit" name="submit" value="Submit">
     </form>
-    <a href="action?=''">Index</a>
 
     <?php include_once 'templates/footer.php' ?>

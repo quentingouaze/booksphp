@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 require('controller/controller.php');
 
 if (isset($_GET['action'])) {

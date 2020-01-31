@@ -27,13 +27,8 @@ function userLogin()
 
         $storedpassword=_userLogin();
         if (password_verify($_POST['password'], $storedpassword[0]['password'])) {
-       
-            echo "password OK <br>";
-           session_start();
-         
-           $_SESSION['firstname'] = "Bienvenue ".$storedpassword[0]['password'];
-           echo $_SESSION['firstname'];
-          
+       $_SESSION['storage']=$storedpassword[0]['password'];
+           
         }
         else{
             echo 'Mauvais password';

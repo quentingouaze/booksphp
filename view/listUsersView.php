@@ -1,5 +1,7 @@
 <?php include_once 'templates/header.php' ?>
+
 <table>
+
     <?php
         $html = '<thead><tr><th>FirstName</th><th>Last Name</th><th>Email</th>';
         foreach ($users as $user){

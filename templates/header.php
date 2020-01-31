@@ -9,3 +9,11 @@
 
 </head>
 <body>
+<nav>
+<a href='?action=createUser'>Inscription</a>
+<a href='?action=userLogin'>Login</a>
+<a href='/'>Index</a>
+</nav>
+<header>
+    <img src="images/image.png" alt='librairie'></header>
+<main>
