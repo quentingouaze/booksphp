@@ -8,6 +8,12 @@ if (isset($_GET['action'])) {
     elseif ($_GET['action'] == 'createUser') {
         createUser();
     }
+    elseif ($_GET['action']=='deleteUser'){
+        deleteUser();
+    }
+    elseif($_GET['action']=='userLogin'){
+        userLogin();
+    }
 }
 else {
     listUsers();

@@ -47,12 +47,27 @@ function _createUser()
     
 }
 
-function _deleteUser($email)
+function _deleteUser()
 {
-}
-function _checkifemailexists(){
     $db=dbConnect();
-    $req=$db->prepare("SELECT * FROM users WHERE 'email'={$_POST['email']}");
+    $emailtodelete=$_GET['email'];
+    $req= $db->prepare("DELETE FROM users WHERE email=:email");
+    $req->bindValue(':email',$emailtodelete, PDO::PARAM_STR);
     $req->execute();
-    return $req->fetchAll();
+    var_dump($req);
+    return("User with email = {$emailtodelete} deleted.");
+}
+
+function _userLogin()
+{
+    $db=dbConnect();
+    $sql = "SELECT * 
+                    FROM users
+                    WHERE email = :email";
+        $email = $_POST['email'];
+        $statement = $db->prepare($sql);
+        $statement->bindValue(':email', $email, PDO::PARAM_STR);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
 }
